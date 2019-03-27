@@ -1,0 +1,196 @@
+@import "css/Roboto/roboto.css" screen; 
+body {
+    margin: 0;
+    min-width: 1292px;
+    font-family: 'roboto', sans-serif;
+    color:#333;
+    background-color:#fff;
+}
+.wrapper {
+    overflow: hidden;
+}
+.header {
+    max-width: 1920px; /*тут сначала стоял max-width и было плохо, смещение header*/
+    height: 150px;  
+    margin: 0 auto;
+    background-color:#cfe5ef;  
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.center {
+    box-sizing: border-box;
+    width: 1292px; 
+    padding: 0 20px;
+    margin: 0 auto;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+.left {
+    float: left;
+    margin-top: 44px;
+    height: 62px;    
+}
+.menu {
+    float: left; 
+    line-height: 20px;
+    margin-top: 65px; /*как можно отцентрировать без маржина? */
+    margin-left: 57px;
+    background: #cfe5ef;
+}
+.enter {
+    float: right;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    font-family: 'roboto';
+    font-weight: bold;   
+    margin-top: 44px;
+    line-height: 60px;
+}
+.menu > ul {
+    display:flex;
+    list-style: none;
+    padding: 0; /*что за отступ без обнуления?*/
+    margin: 0;    /*почему без обнуления маржина высота .left1=62px выростает?*/
+}
+  .text1 a,
+  .text2 a, 
+  .text3 a{
+    padding-left: 20px;
+    padding-right: 17px; 
+    border-left: 3px solid #333;
+    transition: all 0.5s;
+}
+   .text1:hover a{
+        background-color: #fff;
+        transition: all 0.5s;
+}
+    .text2:hover a{
+        background-color: #fff;
+        transition: all 0.5s;
+} 
+    .text3:hover a{
+         background-color: #fff;
+         transition: all 0.5s;
+}
+   a {
+    display: block; 
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#333;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px;
+}
+
+.enter a{
+    box-sizing: border-box;
+    padding-left:37px;
+    padding-right: 37px;
+ 
+}
+ /*.text1:hover  a{
+     display: block;
+    background: #f0f;
+    color: #333;
+    box-shadow: 1px 5px 90px -5pxg gray;
+    transition: all 0.5s;
+}
+.text2:hover a{
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 5px 90px -5pxg gray;
+    transition: all 0.5s;
+}
+.text3:hover a{
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 5px 90px -5pxg gray;
+    transition: all 0.5s; 
+} */
+
+.galari,
+.rubric,
+.contact{
+    list-style: none;
+    min-width: 100px;
+    padding-left: 0;
+    display: none;
+    background: #fff;
+    line-height: 30px;
+    position: absolute;
+    transition: all 2.5s;  /* Почему не работает transition для всплывающего меню?*/
+}
+ .text1:hover .rubric{
+    display: block;
+    background: #fff;
+    transition: all 2.5s; /* Почему не работает transition для всплывающего меню?*/
+  }
+.text2:hover .galari{
+    display: block;
+    background: #fff; 
+    transition: all 2.5s; /* Почему не работает transition для всплывающего меню?*/
+}
+
+.text3:hover .contact{
+    display: block;
+    background: #fff;
+    transition: all 2.5s; /* Почему не работает transition для всплывающего меню?*/
+}
+ .galari li a,
+ .rubric li a,
+ .contact li a{
+    border-left: none;
+}
+.rubric li:first-child a,
+.galari li:first-child a,
+.contact li:first-child a{
+padding-top: 20px;
+}
+
+ .rubric li a,
+ .galari li a,
+ .contact li a{
+text-transform:none;
+font-size: 20px;
+font-family: 'roboto';
+font-weight: normal;
+}
+
+.text {
+    font-family: 'roboto';
+    font-size: 24px;
+    font-weight: bold;   
+    margin-top: 40px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+.border-bottom::after{
+        content:"";
+        position:absolute;
+        bottom:13%;
+        left:50%;
+        width:63%;
+        height:5px;
+        margin-left:-50%;
+        background:#c3c3c3;
+}
+.demo{
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid #9f9f9f;
+    background: #e2e2e2;
+}
